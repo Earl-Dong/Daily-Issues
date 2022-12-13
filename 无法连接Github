@@ -1,0 +1,30 @@
+打开github.com.ipaddress.com获取github域名地址
+
+打开github.global.ssl.fastly.net获取fastly地址
+
+设置本地hosts
+windows路径：C:\Windows\System32\drivers\etc 下的hosts文件
+
+mac打开方式 sudo vim /etc/hosts
+
+在文件的末尾添加两行代码 
+
+获取的github域名地址     github.com
+获取的fastly地址    github.global.ssl.fastly.net
+注意这里需要使用管理员权限打开，没有权限的需要右击属性打开读写权限，不然保存不了
+
+注意：ip地址可能会变，如果以后访问不了，把地址换下，再执行操作
+
+下面提供了解决hosts不能保存的方法
+
+hosts不能保存的办法
+刷新系统dns缓存
+windows：
+
+Windows + X 打开系统命令行（管理员身份）或者 powershell
+
+运行 ipconfig /flushdns 手动刷新系统dns缓存 注意config后面有空格
+
+mac：
+sudo killall -HUP mDNSResponder
+
